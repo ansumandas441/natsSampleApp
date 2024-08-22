@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nats-app/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nats-app/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nats-app",
+  "projects": {
+    "nats-app": {
+      "type": "application",
+      "root": "apps/nats-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/nats-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nats-app/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    }   
+  }
+}
