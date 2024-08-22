@@ -44,6 +44,20 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+## Usage
+```
+# CLI:
+$ nats server run --jetstream
+$ nats stream add
+  with subject nats.subject.jetstream
+
+# For nats core messaging
+$ nats pub postMessage '{"message":"Hello"}'
+
+# For nats jetstream messaging
+$ nats pub postStream '{"message":"Hello"}'
+
+```
 
 ## Test
 
